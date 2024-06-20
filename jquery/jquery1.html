@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Form</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+
+    <form id="myForm">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+        </div>
+        <div>
+            <input type="submit" value="Submit" id="submit">
+        </div>
+        <div id="formData" style="width: 500px; height: 500px;">
+
+        </div>
+    </form>
+    <script>
+        $(document).ready(function () {
+
+
+            $("#myForm").submit(function () {
+                var a = $("#name").val();
+                var b = $("#email").val();
+                alert("name:" + a + "/n" + "email:" + b);
+
+
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
